@@ -4,21 +4,20 @@
 
 
 import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Footer from "../components/footer";
 import Card from "../components/card";
 import Welcome from "./welcomeText";
 import Watch from "../images/watchjpg.jpg";
 import Shoe from "../images/shoes.jpg";
 import Instagram from "../images/instagram.jpg";
-import { addToCart } from "./products";
 
 function Home() {
   const [cart, setCart] = useState([]); // State to track items in the cart
   const navigate = useNavigate();
 
   const handleLogOut = () => {
-    navigate("/login");
+    navigate("/");
   };
   const handleHome=()=>{
 navigate("/home")
@@ -126,8 +125,6 @@ const handleArrow=()=>{
 }
 
 export default Home;
-
-
 
 
 

@@ -13,6 +13,7 @@ import "../App.css";
 import view from "../images/view.png";
 import hide from "../images/hide.png";
 import Footer from "../components/footer"
+import Oauth from "./oauth";
 
 function Register() {
   const [email, setEmail] = useState("");
@@ -113,8 +114,11 @@ function Register() {
             <button onClick={handleRegister}>Register</button>
             <span> If registered, then </span>
             <Link to="/login">login</Link>
+            <Oauth />
           </div>
+          
         </div>
+        
       </div>
       <div className="register-div2">
         <img

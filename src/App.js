@@ -10,17 +10,19 @@ function App() {
   return (
     <Router>
       <Routes>
+      <Route path="/" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/" element={<Register />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/products" element={<Products />} />
+        <Route path="*" element={<h1>404 - Page Not Found</h1>} />
       </Routes>
     </Router>
   );
 }
 
 export default App;
+
 
 

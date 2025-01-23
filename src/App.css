@@ -14,6 +14,7 @@
   align-items: center;
 
   max-width: 70%;
+  margin-bottom:50px;
   
   
 
@@ -58,6 +59,7 @@ input {width: 100%;
   background-color: rgb(14, 14, 45);
   color: white;
   padding-left: 10px; 
+  
 }
 
 
@@ -83,6 +85,9 @@ button{
   margin-top:20px;
   border-radius: 4px;
   font-size: 15px;
+}
+button:hover{
+  cursor: pointer;
 }
 
 
@@ -321,4 +326,40 @@ nav{
   flex-direction: row;
   justify-content: center;
   margin-bottom: 60px;
+}
+
+
+
+.contact-div-class{
+  width:max-content;
+  border: 3px solid rgb(14, 14, 45);
+  border-radius: 10px;
+  height:100%;
+  padding-top:20px;
+  padding-left:20px;
+  padding-bottom:40px;
+  color:rgb(14, 14, 45)
+}
+
+.contact-desc{
+  font-weight:lighter;
+  font-size:40px;
+}
+
+
+.input-field{
+  background-color: rgba(169, 169, 198, 0.374);
+  color:black;
+  width:200px;
+}
+
+select{
+  background-color: rgba(169, 169, 198, 0.374);
+  height:5vh;
+  border-radius: 10px;
+  width:200px;
+}
+
+textarea{
+  width:200px;
 }
