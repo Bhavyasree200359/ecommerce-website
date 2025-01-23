@@ -3,15 +3,17 @@
   height:100vh;
   display: flex; 
   flex-direction: row;
+  margin-bottom: 30px;
   
 }
 .register-div1{
  
   width:70%;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
+
+  max-width: 70%;
   
   
 
@@ -31,7 +33,7 @@
 }
 .register-div1-2{
   display: flex;
-  flex-direction: column; /* Arrange items vertically */
+  flex-direction: column; 
 
   color:rgb(14, 14, 45);
   font-size: 1.2em;
@@ -48,14 +50,23 @@
   
 
 }
-input{
-  width:25vw;
-  height:5vh;
-  border:0 solid black;
+input {width: 100%; 
+  max-width: 25vw; 
+  height: 5vh;
+  border: 0 solid black;
   border-radius: 10px;
   background-color: rgb(14, 14, 45);
-  color:white;
+  color: white;
+  padding-left: 10px; 
 }
+
+
+
+
+
+
+
+
 .register-img{
   width:100%;
   height: 100%;
@@ -74,3 +85,240 @@ button{
   font-size: 15px;
 }
 
+
+
+
+
+
+footer {
+  background-color: rgb(14, 14, 45);
+  color: white;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;  
+  left: 0;          
+  bottom: 0;        
+  width: 100%; 
+  font-weight: lighter;    
+}
+/* Default footer text */
+footer .long-text {
+  display: block;
+}
+
+footer .short-text {
+  display: none;
+}
+
+/* For screens with width 650px or less */
+@media (max-width: 650px) {
+  footer .long-text {
+    display: none;
+  }
+
+  footer .short-text {
+    display: block;
+  }
+}
+
+
+li {
+  list-style-type: none; 
+  padding-left: 20px;
+}
+li:hover{
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+
+nav{
+  color:white;
+  background-color: rgb(14, 14, 45);
+  height:10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 250px;
+  font-size: 20px;
+  font-weight: lighter;
+ 
+}
+.nav-div1{
+  display: flex;
+  flex-direction: row;
+}
+.logout-link{
+  padding-right: 20px;
+}
+.logout-link:hover{
+  cursor: pointer;
+}
+
+.welcome-long-text{
+  text-align: center;
+  font-size: 30px;
+  color:rgb(14, 14, 45);
+  font-weight: lighter;
+  display: block;
+}
+
+
+
+.welcome-short-text {
+  text-align: center;
+  font-size: 30px;
+  color:rgb(14, 14, 45);
+  font-weight: lighter;
+  display: none;
+}
+
+/* For screens with width 650px or less */
+@media (max-width: 1100px) {
+  .welcome-long-text {
+    display: none;
+  }
+
+  .welcome-short-text {
+    display: block;
+  }
+}
+
+
+.card-component{
+  width:300px;
+  height:400px;
+  border:1px solid black;
+  margin-left:20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.total-div{
+  width:100px;
+  height:200px;
+  border:1px solid black;
+  margin-left:20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-left:70px;
+  background-color: rgb(14, 14, 45);
+  border-radius: 20px;
+  color:white;
+  padding-top:30px;
+  padding-left: 30px;
+  font-weight: lighter;
+  font-size: 20px;
+}
+.payment-div{
+  margin-top: 60px;
+}
+.payment-div:hover{
+  cursor: pointer;
+}
+.shopping-items-div{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 70px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+ 
+}
+
+
+.image-style{
+  width:200px;
+  height:250px;
+  
+}
+
+.about{
+  width:70%;
+  display: flex;
+  background:rgb(14, 14, 45);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:20px;
+  margin-bottom: 70px;
+  border-radius: 20px;
+  padding:20px;
+  padding-bottom: 10px;
+  color:white;
+  font-weight: lighter;
+}
+.about-heading{
+  font-size: 30px;
+  font-weight: lighter;
+}
+.arrow-to-right {
+  width: 30px; 
+  height: 30px; 
+  filter: invert(100%) brightness(100%) saturate(0%) grayscale(100%);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+
+
+.arrow-to-right:hover {
+  transform: translateX(5px); /* Slight movement when hovered for interactivity */
+}
+
+
+
+
+.about-text{
+  color:white;
+  font-size:20px;
+}
+
+.about-text1{
+  color:white;
+  font-size:20px;
+  display: flex;
+}
+
+
+.insta-image{
+  width:40px;
+  height: 40px;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.insta-image:hover{
+  cursor: pointer;
+}
+
+
+.payment-component{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(14, 14, 45);
+  color:white;
+  font-weight: lighter;
+  font-size: 50px;
+  height:100vh;
+
+}
+
+
+.cards-wrap{
+  margin:20px;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 60px;
+}
