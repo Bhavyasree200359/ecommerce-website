@@ -8,7 +8,7 @@ import Contact from './components/contact';
 import Products from './components/products';
 function App() {
   return (
-    <Router>
+    <Router basename='/ecommerce-website'>
       <Routes>
       <Route path="/" element={<Register />} />
         <Route path="/login" element={<Login />} />
