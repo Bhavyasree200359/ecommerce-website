@@ -52,7 +52,6 @@
 
 }
 input {width: 100%; 
-  max-width: 25vw; 
   height: 5vh;
   border: 0 solid black;
   border-radius: 10px;
@@ -214,7 +213,6 @@ nav{
   display: flex;
   flex-direction: column;
   margin-top: 100px;
-  margin-left:70px;
   background-color: rgb(14, 14, 45);
   border-radius: 20px;
   color:white;
@@ -222,6 +220,7 @@ nav{
   padding-left: 30px;
   font-weight: lighter;
   font-size: 20px;
+  padding-right:20px;
 }
 .payment-div{
   margin-top: 60px;
@@ -338,7 +337,8 @@ nav{
   padding-top:20px;
   padding-left:20px;
   padding-bottom:40px;
-  color:rgb(14, 14, 45)
+  color:rgb(14, 14, 45);
+  padding:30px;
 }
 
 .contact-desc{

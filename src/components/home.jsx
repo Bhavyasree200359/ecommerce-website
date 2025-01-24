@@ -1,8 +1,3 @@
-
-
-
-
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/footer";
@@ -12,7 +7,9 @@ import Watch from "../images/watchjpg.jpg";
 import Shoe from "../images/shoes.jpg";
 import Instagram from "../images/instagram.jpg";
 
+
 function Home() {
+  
   const [cart, setCart] = useState([]); // State to track items in the cart
   const navigate = useNavigate();
 
@@ -64,6 +61,7 @@ const handleArrow=()=>{
           <li onClick={handleProducts}>All Products</li>
           <li>
             Cart ({cart.reduce((sum, item) => sum + item.quantity, 0)})
+        
           </li>
         </div>
         <div>
@@ -90,7 +88,7 @@ const handleArrow=()=>{
         />
         <Card image={Watch} price={49999} productName="Apple Watch SE" addToCart={addToCart} />
         <Card image={Shoe} price={2999} productName="Women Running Shoes" addToCart={addToCart} />
-        <div className="total-div"><div>Total Cost: ₹{cart.reduce((total, item) => total + item.price * item.quantity, 0)}
+        <div className="total-div"><div>Total Cost: ₹{cart.reduce((total, item) => total + item.price * item.quantity, 0)}/-
         </div>
         <div className="payment-div" onClick={handlePayment}>Payment</div>
         </div>
@@ -118,6 +116,9 @@ const handleArrow=()=>{
           </p>
         </div>
       </div>
+
+
+      
 
       <Footer />
     </div>

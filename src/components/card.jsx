@@ -1,12 +1,8 @@
 
 
-
-
-
-
 import React, { useState } from "react";
 
-function Card({ image, price, productName, addToCart }) {
+function Card({ id,image, price, productName, addToCart }) {
   const [quantity, setQuantity] = useState(0);
 
   const handleIncrement = () => {
@@ -34,8 +30,12 @@ function Card({ image, price, productName, addToCart }) {
         <span>{quantity}</span>
         <button onClick={handleIncrement}>+</button>
       </div>
+      
     </div>
   );
 }
 
 export default Card;
+
+
+
