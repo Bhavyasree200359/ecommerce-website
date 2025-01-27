@@ -1,41 +1,49 @@
-
-
 import React, { useState } from "react";
 
-function Card({ id,image, price, productName, addToCart }) {
-  const [quantity, setQuantity] = useState(0);
+import { connect } from "react-redux";
+import { incrementItem } from "../components/redux/actions";
 
-  const handleIncrement = () => {
-    setQuantity(quantity + 1);
-    addToCart({ image, price, productName }, 1);
-  };
-
-  const handleDecrement = () => {
-    if (quantity > 0) {
-      setQuantity(quantity - 1);
-      addToCart({ image, price, productName }, -1);
-    }
+function Card({
+  id,
+  itemCount,
+  image,
+  productName,
+  productPrice,
+  incrementItem,
+}) {
+  const handleAddToCart = () => {
+    incrementItem({
+      id,
+      price: parseFloat(productPrice),
+      productDetails: {
+        id,
+        image,
+        productName,
+        productPrice: parseFloat(productPrice),
+      },
+    });
   };
 
   return (
     <div className="card-component">
-      <img src={image} alt="photo" className="image-style" />
+      <img src={image} alt={productName} className="image-style" />
       <p>
         {"\u20B9"}
-        {price}/-
+        {productPrice}/-
       </p>
       <span>{productName}</span>
       <div>
-        <button onClick={handleDecrement}>-</button>
-        <span>{quantity}</span>
-        <button onClick={handleIncrement}>+</button>
+        <span>{itemCount || 0}</span>
+        <button onClick={handleAddToCart}>Add to Cart</button>
       </div>
-      
     </div>
   );
 }
+const mapStateToProps = (state, ownProps) => ({
+  itemCount: state.itemCounts[ownProps.id] || 0,
+});
 
-export default Card;
-
-
-
+const mapDispatchToProps = {
+  incrementItem,
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Card);

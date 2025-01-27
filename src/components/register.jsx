@@ -1,18 +1,9 @@
-
-
-
-
-
-
-
-
-
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "../App.css";
 import view from "../images/view.png";
 import hide from "../images/hide.png";
-import Footer from "../components/footer"
+import Footer from "../components/footer";
 import Oauth from "./oauth";
 
 function Register() {
@@ -92,7 +83,6 @@ function Register() {
                 type={showConfirmPassword ? "text" : "password"}
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                
               />
               <img
                 src={showConfirmPassword ? view : hide}
@@ -116,9 +106,7 @@ function Register() {
             <Link to="/login">login</Link>
             <Oauth />
           </div>
-          
         </div>
-        
       </div>
       <div className="register-div2">
         <img

@@ -6,6 +6,7 @@ import Register from './components/register';
 import Payment from './components/payment';
 import Contact from './components/contact';
 import Products from './components/products';
+import Cart from './components/cart';
 function App() {
   return (
     <Router basename='/ecommerce-website'>
@@ -16,6 +17,7 @@ function App() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="*" element={<h1>404 - Page Not Found</h1>} />
       </Routes>
     </Router>

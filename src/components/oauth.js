@@ -13,9 +13,9 @@ function Oauth() {
     navigate('/home'); 
   };
   setTimeout(() => {
-    googleLogout();  // Log out the user after the time period
-    setIsLoggedIn(false);  // Update the state to reflect that the user is logged out
-    console.log("User has been logged out automatically"); // Redirect to register page after logout
+    googleLogout();  
+    setIsLoggedIn(false);  
+    console.log("User has been logged out automatically"); 
   }, 30);
 
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import view from "../images/view.png";
 import hide from "../images/hide.png";
-import Footer from "../components/footer"
+import Footer from "../components/footer";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -42,29 +42,29 @@ function Login() {
             />
             <br />
             <p>Password</p>
-            <div style={{ position: "relative",
-              justifyContent:'space-between'
-             }}>
+            <div
+              style={{ position: "relative", justifyContent: "space-between" }}
+            >
               <input
                 type={showPassword ? "text" : "password"}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
               <img
-  src={showPassword ? view : hide}
-  alt="toggle visibility"
-  onClick={togglePasswordVisibility}
-  style={{
-    position: "absolute",
-    right: "10px",
-    top: "50%",
-    transform: "translateY(-50%)",
-    cursor: "pointer",
-    width: "20px",
-    height: "20px",
-    filter: "invert(100%)", // This will turn the image white
-  }}
-/>
+                src={showPassword ? view : hide}
+                alt="toggle visibility"
+                onClick={togglePasswordVisibility}
+                style={{
+                  position: "absolute",
+                  right: "10px",
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  cursor: "pointer",
+                  width: "20px",
+                  height: "20px",
+                  filter: "invert(100%)",
+                }}
+              />
             </div>
             <br />
             <button onClick={handleLogin}>Login</button>
@@ -86,5 +86,3 @@ function Login() {
 }
 
 export default Login;
-
-

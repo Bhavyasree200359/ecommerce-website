@@ -1,8 +1,11 @@
 import React from "react";
 
 import { useNavigate } from "react-router-dom";
-function Nav(){
 
+import { connect } from 'react-redux';
+
+function Nav({itemCounts}){
+  const totalItems = Object.values(itemCounts).reduce((sum, count) => sum + count, 0); 
     const navigate = useNavigate();
 
   const handleLogOut = () => {
@@ -18,6 +21,9 @@ navigate("/home")
   const handleProducts=()=>{
     navigate("/products")
   }
+  const handleCart=()=>{
+    navigate("/cart")
+  }
     return(
         <div>
             <nav>
@@ -25,6 +31,10 @@ navigate("/home")
           <li onClick={handleHome}>Home</li>
           <li onClick={handleContact}>Contact</li>
           <li onClick={handleProducts}>All Products</li>
+          <li onClick={handleCart}>
+            Cart {totalItems}
+        
+          </li>
         </div>
         <div>
           <li onClick={handleLogOut} className="logout-link">
@@ -36,8 +46,11 @@ navigate("/home")
     )
 }
 
+const mapStateToProps = (state) => ({
+  itemCounts: state.itemCounts,
+});
 
-export default Nav;
+export default connect(mapStateToProps)(Nav);
 
 
 

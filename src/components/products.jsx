@@ -1,82 +1,115 @@
 import React from "react";
-import Nav from "../components/nav"
+import Nav from "../components/nav";
 import Footer from "./footer";
 import Card from "./card";
-import Shoe from '../images/shoes.jpg';
+import Shoe from "../images/shoes.jpg";
 import Watch from "../images/watchjpg.jpg";
-function Products(){
-    const addToCart=()=>{
-        
-      };
-        
-    return(
-        <div>
-            <Nav />
-            <div className="cards-wrap">
-            <Card
+function Products() {
+  return (
+    <div>
+      <Nav />
+      <div className="cards-wrap">
+        <Card
+          id="1"
           image="https://m.media-amazon.com/images/I/61NbiB1GU-L.jpg"
-          price={28999}
+          productPrice={28999}
           productName="OnePlus Nord 4 5G-1"
-          addToCart={addToCart}
         />
         <Card
+          id="2"
           image="https://img.faballey.com/images/Product/XKS04397Z/d3.jpg"
-          price={3999}
+          productPrice={3999}
           productName="Indo Western Dress-1"
-          addToCart={addToCart}
         />
-        <Card image={Watch} price={49999} productName="Apple Watch SE-1" addToCart={addToCart} />
-        <Card image={Shoe} price={2999} productName="Women Running Shoes-1" addToCart={addToCart} />
         <Card
+          id="3"
+          image={Watch}
+          productPrice={49999}
+          productName="Apple Watch SE-1"
+        />
+        <Card
+          id="4"
+          image={Shoe}
+          productPrice={2999}
+          productName="Women Running Shoes-1"
+        />
+        <Card
+          id="9"
           image="https://m.media-amazon.com/images/I/61NbiB1GU-L.jpg"
-          price={28999}
+          productPrice={28999}
           productName="OnePlus Nord 4 5G-2"
-          addToCart={addToCart}
         />
         <Card
+          id="10"
           image="https://img.faballey.com/images/Product/XKS04397Z/d3.jpg"
-          price={3999}
+          productPrice={3999}
           productName="Indo Western Dress-2"
-          addToCart={addToCart}
         />
-        <Card image={Watch} price={49999} productName="Apple Watch SE-2" addToCart={addToCart} />
-        <Card image={Shoe} price={2999} productName="Women Running Shoes-2" addToCart={addToCart} />
         <Card
+          id="11"
+          image={Watch}
+          productPrice={49999}
+          productName="Apple Watch SE-2"
+        />
+        <Card
+          id="12"
+          image={Shoe}
+          productPrice={2999}
+          productName="Women Running Shoes-2"
+        />
+        <Card
+          id="13"
           image="https://m.media-amazon.com/images/I/61NbiB1GU-L.jpg"
-          price={28999}
+          productPrice={28999}
           productName="OnePlus Nord 4 5G-3"
-          addToCart={addToCart}
         />
         <Card
+          id="14"
           image="https://img.faballey.com/images/Product/XKS04397Z/d3.jpg"
-          price={3999}
+          productPrice={3999}
           productName="Indo Western Dress-3"
-          addToCart={addToCart}
         />
-        <Card image={Watch} price={49999} productName="Apple Watch SE-3" addToCart={addToCart} />
-        <Card image={Shoe} price={2999} productName="Women Running Shoes-3" addToCart={addToCart} />
         <Card
+          id="15"
+          image={Watch}
+          productPrice={49999}
+          productName="Apple Watch SE-3"
+        />
+        <Card
+          id="16"
+          image={Shoe}
+          productPrice={2999}
+          productName="Women Running Shoes-3"
+        />
+        <Card
+          id="17"
           image="https://m.media-amazon.com/images/I/61NbiB1GU-L.jpg"
-          price={28999}
+          productPrice={28999}
           productName="OnePlus Nord 4 5G-4"
-          addToCart={addToCart}
         />
         <Card
+          id="18"
           image="https://img.faballey.com/images/Product/XKS04397Z/d3.jpg"
-          price={3999}
+          productPrice={3999}
           productName="Indo Western Dress-4"
-          addToCart={addToCart}
         />
-        <Card image={Watch} price={49999} productName="Apple Watch SE-4" addToCart={addToCart} />
-        <Card image={Shoe} price={2999} productName="Women Running Shoes-4" addToCart={addToCart} />
-            
-            </div>
-            
+        <Card
+          id="19"
+          image={Watch}
+          productPrice={49999}
+          productName="Apple Watch SE-4"
+        />
+        <Card
+          id="20"
+          image={Shoe}
+          productPrice={2999}
+          productName="Women Running Shoes-4"
+        />
+      </div>
 
-            <Footer />
-        </div>
-    )
-
-
+      <Footer />
+    </div>
+  );
 }
+
 export default Products;
